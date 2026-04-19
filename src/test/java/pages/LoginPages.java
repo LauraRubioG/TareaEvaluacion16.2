@@ -19,6 +19,37 @@ public class LoginPages {
     //cssSelector es mas potente ya que permite ser muy específico
     private By errorMsg = By.cssSelector("h3[data-test='error']");
 
+    public LoginPages(WebDriver driver){
+        this.driver = driver;
+    }
+    //metodo para ingresar el usurio
+    public void IngresarUsuario(String usuario){
+        //primero usamos el metodo clear para borrar lo que haya previamente escrito
+        driver.findElement(userField).clear();
+        driver.findElement(userField).sendkey(usuario);
+    }
+    //metodo para ingresar la contrasena
+    public void IngresarPassword(String password){
+        driver.findElement(passField).clear();
+        driver.findElement(passField).sendkey(password);
+    }
+    //metodo que pulsa el boton de acceso
+    public void BotonLogin(){
+        driver.findElement(loginBtn).click();
+    }
+
+    //metodo que hace el login entero
+    public void LoginCompleto(String usuario, String password){
+        //usuario
+        driver.findElement(userField).clear();
+        driver.findElement(userField).sendkey(usuario);
+        //contresena
+        driver.findElement(passField).clear();
+        driver.findElement(passField).sendkey(password);
+        //boton acsseo
+        driver.findElement(loginBtn).click();
+    }
+
 
 
 
