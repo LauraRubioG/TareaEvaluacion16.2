@@ -26,12 +26,12 @@ public class LoginPages {
     public void IngresarUsuario(String usuario){
         //primero usamos el metodo clear para borrar lo que haya previamente escrito
         driver.findElement(userField).clear();
-        driver.findElement(userField).sendkey(usuario);
+        driver.findElement(userField).sendKeys(usuario);
     }
     //metodo para ingresar la contrasena
     public void IngresarPassword(String password){
         driver.findElement(passField).clear();
-        driver.findElement(passField).sendkey(password);
+        driver.findElement(passField).sendKeys(password);
     }
     //metodo que pulsa el boton de acceso
     public void BotonLogin(){
@@ -42,12 +42,17 @@ public class LoginPages {
     public void LoginCompleto(String usuario, String password){
         //usuario
         driver.findElement(userField).clear();
-        driver.findElement(userField).sendkey(usuario);
+        driver.findElement(userField).sendKeys(usuario);
         //contresena
         driver.findElement(passField).clear();
-        driver.findElement(passField).sendkey(password);
+        driver.findElement(passField).sendKeys(password);
         //boton acsseo
         driver.findElement(loginBtn).click();
+    }
+
+    //metodo para el mensaje de error
+    public String mensajError(){
+        return driver.findElement(errorMsg).getText();
     }
 
 
