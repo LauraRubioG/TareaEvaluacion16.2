@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.NoSuchElementException;
 
 public class InventoryPage {
     private WebDriver driver;
@@ -12,7 +13,9 @@ public class InventoryPage {
     private By botonremoveMochila = By.id("remove-sauce-labs-backpack");
     private By botonremoveLuz = By.id("remove-sauce-labs-bike-light");
 
-    private By botoncarrito = By.id("shopping_cart_badge");
+    private By botoncarrito = By.className("shopping_cart_badge");
+
+    private By tituloPagina = By.className("title");
 
     //Creamos el constructor
     public InventoryPage(WebDriver driver){
@@ -39,7 +42,7 @@ public class InventoryPage {
 
     //Aqui creamos el metodo para obtener el numero total del carrito
     public String obtenerTotalCarrito(){
-        return driver.findElement();
+        return driver.findElement(botoncarrito).getText();
     }
 
     //Metodo para ver si un texto o boton aparece en la pantañña
@@ -47,9 +50,9 @@ public class InventoryPage {
         return driver.findElement(botonremoveMochila).isDisplayed();
     }
 
-    //Aqui hacemos un metodo que nos lee el producto que esta dentro del carritp
-    public String NombreProducto(){
-        return driver.findElement(By.className("inventory_item_name")).getText();
+    //Metodo Adicional: Metodo para obtener el titulo de la pagina
+    public String obtenerTituloPagina(){
+        return driver.findElement(tituloPagina).getText();
     }
 
 

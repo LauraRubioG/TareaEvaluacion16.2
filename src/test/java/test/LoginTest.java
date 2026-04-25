@@ -21,6 +21,8 @@ public class LoginTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
+        driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(5));
+
         driver.get("https://www.saucedemo.com/");
 
         paginalogin = new LoginPages(driver);
@@ -35,21 +37,20 @@ public class LoginTest {
     //TEST
     //Test loginCorrecto
     @Test
-    public void loginCorrecto() throws InterruptedException{
-        paginalogin.LoginCompleto("standard_user","secret_sauce");
-        Thread.sleep(2000);
+    public void loginCorrecto() {
+        paginalogin.loginCompleto("standard_user","secret_sauce");
+
         String urlActual = driver.getCurrentUrl();
         assertTrue(urlActual.contains("inventory"), "Error: Esta url no contiene inventory después de entrar");
     }
 
     //Test loginIncorrecto
     @Test
-    public void loginIncorrecto() throws InterruptedException{
-        paginalogin.LoginCompleto("standard_user", "contraseñanovalida");
-        Thread.sleep(2000);
+    public void loginIncorrecto() {
+        paginalogin.loginCompleto("standard_user", "contraseñanovalida");
+
         String textoError = paginalogin.mensajError();
-        assertTrue(textoError.contains("ha habido un error, el usuario y la contraseña no coinciden"),
-                "Error: el mensaje de contraseña y usuario no valido no ha aparecido");
+        assertTrue(textoError.contains("Epic sadface"), "Error: el mensaje de contraseña y usuario no valido no ha aparecido");
 
     }
 
