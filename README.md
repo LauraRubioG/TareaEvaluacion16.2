@@ -107,8 +107,8 @@ Valida la interacción con el catálogo y la lógica de la cesta de la compra.
 
 ## 🧠 5. Apreciación y Reflexión Personal
 
-Durante el desarrollo de esta tarea, mi principal aprendizaje ha sido la transición de crear scripts básicos a desarrollar **código profesional, escalable y mantenible**. Al principio de mi aprendizaje, tendía a resolver los problemas de sincronización de la página web utilizando pausas fijas en el código (`Thread.sleep()`), lo cual ralentizaba la ejecución de mis pruebas. Tras investigar y refactorizar el proyecto, logré implementar **esperas implícitas (`implicitlyWait`)**, entendiendo cómo Selenium gestiona el DOM y logrando tests mucho más ágiles.
+Esta tarea me ha resultado bastante compleja. Pero al igual que ha resultado ser un reto con tantísimas dificultades que he tenido por el camino, he aprendido mucho sobre cómo usar mejor el driver de Selenium y sobre todo una cosa que me ha gustado mucho es poder ver el uso de las id que tanto hemos visto en la asignatura de Lenguaje de Marcas y ver uno de sus tantos usos.
 
-Además, lidiar con la excepción `NoSuchElementException` me permitió comprender profundamente la diferencia entre el código HTML visible y el estado dinámico del DOM. Aprendí que cuando un elemento desaparece (como el contador del carrito al quedarse a 0) o no ha cargado, la prueba falla, lo que me llevó a afinar mis localizadores y el flujo de los métodos.
+Es verdad que al principio me costó ir cogiéndole el ritmo para poder ir entendiéndolo todo e ir sabiendo qué iba haciendo. Pero me ha encantado ver el mundo de la automatización desde otro ámbito de la programación.
 
-Por último, el uso riguroso del patrón **Page Object Model (POM)** y la aplicación de las convenciones de nombrado de Java (como `camelCase`) han dado como resultado un código mucho más limpio. Separar la lógica de interacción (Pages) de la lógica de aserción (Tests) hace que este proyecto no solo funcione bien ahora, sino que sea muy fácil de ampliar en el futuro. Ha sido una práctica muy enriquecedora para consolidar las bases del QA Automation. 🌸✨
+Haciendo una conclusión general, no ha sido una tarea fácil pero me ha gustado mucho estar buscando e investigando un nuevo campo del que antes no había sabido. 🌸✨
