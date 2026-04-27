@@ -99,7 +99,7 @@ Valida la interacción con el catálogo y la lógica de la cesta de la compra.
 
 > **Nota:** Todos los tests se han ejecutado correctamente pasando a color verde (Passed).
 
-![Captura de Tests Exitosos](ruta/a/tu/captura.png) 
+![Captura de Tests Exitosos](imagenes/testLoginTest.png) 
 
 *(Si quieres subir varias, añade más líneas iguales con las rutas de tus otras imágenes)*
 
