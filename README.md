@@ -95,13 +95,17 @@ Valida la interacción con el catálogo y la lógica de la cesta de la compra.
 
 ## 📸 4. Capturas de Ejecución
 
-*(Sustituye la ruta de la imagen por tu captura real)*
+
 
 > **Nota:** Todos los tests se han ejecutado correctamente pasando a color verde (Passed).
 
 ![Captura de Tests Exitosos](imagenes/testLoginTest.png) 
+![Captura de Tests Exitosos](imagenes/testInventorytest1.png) 
+![Captura de Tests Exitosos](imagenes/testinventorytest2.png) 
+![Captura de Tests Exitosos](imagenes/testinventorytest3.png) 
 
-*(Si quieres subir varias, añade más líneas iguales con las rutas de tus otras imágenes)*
+
+*
 
 ---
 
